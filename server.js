@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 // serves static content from the public directory
-app.use(express.static(path.join("__dirname", "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // middleware to parse incoming requests with data stored in the body of the request
 app.use(express.urlencoded( {extended: true })); // parses content-type : "x-www-form-urlencoded"
